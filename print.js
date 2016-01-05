@@ -8,12 +8,28 @@ $(document).ready(function() {
 		periodSection.append(periodInputBox);
 	}
 
-	var createFriendlyDataSet = function () {
+	/*var createFriendlyDataSet = function () {
 		var dataSetLabel = $("div:contains('Data Set')").closest(".selectionBoxRow");
 		var dataSetSelectedOption = $("#selectedDataSetId option:selected").text();
 		var printFriendlyDataSetOption = "<span id='datasetOption'>" + dataSetSelectedOption + "</span>"
 		
 		dataSetLabel.append(printFriendlyDataSetOption);
+	}*/
+
+	var checkBoxDataSet = function () {
+		var dataSetLabel = $("div:contains('Data Set')").closest(".selectionBoxRow");
+		var datasetOption = document.querySelectorAll('#selectedDataSetId option');
+		//console.log(datasetOption);
+
+		var printFriendlyDataSet = "";
+		for(var counter = 1; counter < datasetOption.length; counter++) {
+			printFriendlyDataSet += ("<input type='checkbox'>" + $(datasetOption[counter]).text() + "&nbsp;");
+		}
+
+		// console.log(printFriendlyDataSet);
+		printFriendlyDataSet = "<span id='dataSetCheckBoxes'>" + printFriendlyDataSet + "</span>";
+
+		dataSetLabel.append(printFriendlyDataSet);
 	}
 
 	var resetPeriod = function () {
@@ -21,14 +37,15 @@ $(document).ready(function() {
 	}
 
 	var resetDataSet = function () {
-		$("#datasetOption").remove();
+		$("#dataSetCheckBoxes").remove();
 	}
 
 	$("#printButton").click(function(e) {
 		e.stopPropagation();
 		e.preventDefault();
 
-		createFriendlyDataSet();
+		checkBoxDataSet();
+		//createFriendlyDataSet();
 		createFriendlyPeriod();
 
 		$("span:contains('Value')").closest("tr").hide();

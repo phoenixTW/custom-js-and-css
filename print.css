@@ -1,0 +1,38 @@
+@media print{
+
+	body {
+		font-family: georgia, times, serif;
+		font-size: 12pt;
+	}
+
+	#filterDataSetSectionDiv, #headerMessage, .inputCriteria, #currentSelection, .fa-question-circle, #selectedPeriodId, #prevButton, #nextButton, .sectionFilter {
+		display: none !important;
+	}
+
+
+	#moduleHeader {
+		display: block !important;
+	}
+
+	.selectionLabel, #selectedOrganisationUnit, #selectedDataSetId {
+		display: inline-block !important;
+	}
+
+	#selectedPeriodId {
+		visibility: visible !important;
+	}
+
+	#selectionBox {
+		display: block !important;
+	}
+/*
+	.entryfield {
+		visibility: visible;
+	}
+*/	
+
+}
+
+
+
+ 

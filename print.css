@@ -5,7 +5,7 @@
 		font-size: 12pt;
 	}
 
-	#filterDataSetSectionDiv, #headerMessage, .inputCriteria, #currentSelection, .fa-question-circle, #selectedPeriodId, #prevButton, #nextButton, .sectionFilter {
+	#filterDataSetSectionDiv, #headerMessage, .inputCriteria, #currentSelection, .fa-question-circle, #selectedDataSetId, #selectedPeriodId, #prevButton, #nextButton, .sectionFilter {
 		display: none !important;
 	}
 
@@ -14,7 +14,7 @@
 		display: block !important;
 	}
 
-	.selectionLabel, #selectedOrganisationUnit, #selectedDataSetId {
+	.selectionLabel, #selectedOrganisationUnit {
 		display: inline-block !important;
 	}
 

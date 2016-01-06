@@ -31,6 +31,15 @@
 	}
 */	
 
+	#selectionBox, .entryfield {
+		background-color: white !important;
+	}
+
+	.customTextBox {
+		width: 394px; 
+		padding: 3px;
+		margin: 5px 0px 0px 5px;
+	}
 }
 
 

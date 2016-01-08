@@ -18,28 +18,18 @@ $(document).ready(function() {
 		$("#selectionBox").append(snippet.getHeaderPrintFriendlyPeriod());
 	}
 
-	/*var createFriendlyDataSet = function () {
-		var dataSetLabel = $("div:contains('Data Set')").closest(".selectionBoxRow");
-		var dataSetSelectedOption = $("#selectedDataSetId option:selected").text();
-		var printFriendlyDataSetOption = "<span id='datasetOption'>" + dataSetSelectedOption + "</span>"
-		
-		dataSetLabel.append(printFriendlyDataSetOption);
-	}*/
-
 	var checkBoxDataSet = function () {
 		var dataSetLabel = $("div:contains('Data Set')").closest(".selectionBoxRow");
 		var datasetOption = document.querySelectorAll('#selectedDataSetId option');
-		//console.log(datasetOption);
 
-		var printFriendlyDataSet = "";
+		var printFriendlyDataSetCheckboxes = "";
 		for(var counter = 1; counter < datasetOption.length; counter++) {
-			printFriendlyDataSet += ("<input type='checkbox'>" + $(datasetOption[counter]).text() + "&nbsp;");
+			printFriendlyDataSetCheckboxes += ("<input type='checkbox'><label class='customCheckbox'>" + $(datasetOption[counter]).text() + "</label>");
 		}
 
-		// console.log(printFriendlyDataSet);
-		printFriendlyDataSet = "<span id='dataSetCheckBoxes'>" + printFriendlyDataSet + "</span>";
+		printFriendlyDataSetCheckboxes = "<span id='dataSetCheckBoxes'>" + printFriendlyDataSetCheckboxes + "</span>";
 
-		dataSetLabel.append(printFriendlyDataSet);
+		dataSetLabel.append(printFriendlyDataSetCheckboxes);
 	}
 	var dataEntryUserName = function() {
 		$("#selectionBox").append(snippet.getHeaderUserName());
@@ -65,7 +55,6 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		checkBoxDataSet();
-		//createFriendlyDataSet();
 		createFriendlyPeriod();
 		dataEntryUserName();
 
@@ -74,6 +63,7 @@ $(document).ready(function() {
 		window.print();
 
 		$("span:contains('Value')").closest("tr").show();
+
 		resetDataSet();
 		resetPeriod();
 		resetUserNameRow();

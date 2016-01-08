@@ -1,0 +1,9 @@
+@media print{
+  textarea ::-webkit-input-placeholder {
+     color: white !important;
+  }
+
+  textarea {
+      resize: none;
+  }
+}

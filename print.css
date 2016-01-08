@@ -1,11 +1,11 @@
-@media print{
+@media print {
 
 	body {
 		font-family: georgia, times, serif;
 		font-size: 12pt;
 	}
 
-	#filterDataSetSectionDiv, #headerMessage, .inputCriteria, #currentSelection, .fa-question-circle, #selectedDataSetId, #selectedPeriodId, #prevButton, #nextButton, .sectionFilter {
+	#filterDataSetSectionDiv, #headerMessage, #currentSelection, #selectedDataSetId, #selectedPeriodId, #prevButton, #nextButton, .inputCriteria,  .fa-question-circle, .sectionFilter {
 		display: none !important;
 	}
 
@@ -25,23 +25,20 @@
 	#selectionBox {
 		display: block !important;
 	}
-/*
-	.entryfield {
-		visibility: visible;
-	}
-*/	
 
 	#selectionBox, .entryfield {
 		background-color: white !important;
 	}
 
+	/* Custom element created by JS */
+
 	.customTextBox {
-		width: 394px; 
+		width: 394px;
 		padding: 3px;
 		margin: 5px 0px 0px 5px;
 	}
+
+	.customCheckbox {
+	    margin-right: 10px !important;
+	}
 }
-
-
-
- 
